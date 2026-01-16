@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(Inter/Inter-VariableFont_opsz\,wght.ttf);
+    font-weight: 200, 700;
+}
+
+@font-face {
+    font-family: 'Lexend_Deca';
+    src: url(Lexend_Deca/LexendDeca-VariableFont_wght.ttf);
+    font-weight: 100, 200, 300, 400;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    /* border: 8px solid #999; */
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* aligns items left to right along the main axis. 
+    Center puts items in the center of the box. Flex-start is left, Flex-end is right */
+    align-items: center; /* aligns itmes veritcally on the cross axis. 
+    Center puts the items in the center of the box from top to bottom. Flex-start is 
+    left, Flex-end is right */
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.preview-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
+    border: black;
+    border-radius: 2%;
+    background-color: hsl(244, 37%, 16%);
+    overflow: hidden; /* allows the corners of the image to be clipped when they run over */
+}
+
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: center;
+    padding: 40px 60px;
+    /* padding-right: 150px; */
+    flex: 1;
+    margin: 0;
+    /* margin-left: 4em;
+    margin-right: 6em; */
+}
+
+.left-box {
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+    /* border: 1px solid #700; */
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+    /* align-content: center; */
+}
+
+.right-column {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.stat-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* justify-content: flex-start;
+    gap: 100px; */
+    align-items: center;
+    /* border: 1px solid #999; */
+    box-sizing: border-box;
+}
+
+.stat-box {
+    /* border: 1px solid #999; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2px;
+    margin-bottom: 25px;
+}
+
+.main-heading {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 5;
+}
+
+.purple-text {
+    color: hsl(277, 64%, 61%);
+}
+
+.main-paragraph {
+    font-family: 'Inter';
+    font-weight: 200;
+    font-size: 15px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+
+.stat {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    margin: 0;
+    /* text-transform: uppercase; */
+    /* border: 1px solid #999; */
+}
+
+.stat-description {
+    font-family: 'Lexend_Deca';
+    font-weight: 200;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    /* border: 1px solid #999; */
+}
+
+.image-container {
+    background-color: hsl(271, 100%, 50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* hsl(244, 37%, 16%) */
+    /* line-height: 0; */
+    /* display: flex; */
+
+    /* isolation: isolate; */
+    /* position: relative;
+    display: inline-block; */
+}
+
+/* .image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 61%);
+    background-color: rgba(114, 29, 170, 0.836);
+    mix-blend-mode: multiply;
+    z-index: 1; }*/
+
+.image-women {
+    filter: sepia(50%) saturate(200%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+}
+
+
+@media (max-width: 768px) {
+  /* Stack the main card into columns instead of a row */
+  .preview-card {
+    flex-direction: column-reverse; /* Puts image on top, text on bottom */
+    text-align: center;
+  }
+
+  
+  .stat-grid {
+    flex-direction: column; 
+    gap: 25px; 
+    padding: 20px 0;
+  }
+
+  .left-column {
+    align-items: center;
+    padding: 40px 30px; 
+  }
+
+  .stat-box {
+    align-items: center;
+  }
+
+  .image-women {
+    width: 100%;
+    height: 100%;
+  }
+}
