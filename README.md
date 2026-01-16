@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://metalfenser.github.io/Challenge-2-Stats-Preview-Card/)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
